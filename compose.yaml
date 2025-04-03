@@ -1,0 +1,6 @@
+﻿services:
+  polar.openapi.tests:
+    image: polar.openapi.tests
+    build:
+      context: .
+      dockerfile: Polar.OpenAPI.Tests/Dockerfile

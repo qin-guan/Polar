@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net9.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <PublishAot>true</PublishAot>
+        <IsTestProject>true</IsTestProject>
+        <IsPackable>false</IsPackable>
+        <InvariantGlobalization>true</InvariantGlobalization>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Using Include="System.Net"/>
+        <Using Include="Microsoft.Extensions.DependencyInjection"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Content Include="..\.dockerignore">
+            <Link>.dockerignore</Link>
+        </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="TUnit" Version="0.19.32"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Polar.OpenAPI\Polar.OpenAPI.csproj"/>
+    </ItemGroup>
+
+</Project>
